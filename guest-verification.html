@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src https://challenges.cloudflare.com; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'" />
+  <title>알수록좋지 · 게스트 연결 확인</title>
+  <link rel="stylesheet" href="guest-verification.css" />
+  <script src="guest-verification.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="book" aria-hidden="true"></div>
+    <p class="brand">알수록좋지</p>
+    <h1>안전하게 연결할게요</h1>
+    <p>자동 프로그램의 게스트 계정 대량 생성을 막기 위해 사람 확인을 진행해요.</p>
+    <p class="notice">‘사람 확인 시작’을 누르면 Cloudflare Turnstile이 연결되어 IP 주소·브라우저 및 기기 신호를 처리해요. 앱은 닉네임·학습 기록·구독 정보를 이 페이지에 보내지 않아요. 확인 결과는 Supabase 인증 서버가 검증하며, 확인을 마치면 앱으로 돌아가요.</p>
+    <p class="links"><a href="/" target="_blank" rel="noopener noreferrer">앱 개인정보처리방침</a> · <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">Cloudflare 개인정보 안내</a></p>
+    <div id="turnstile-widget" data-sitekey="0x4AAAAAAFddZQw3KmGvGDy5"></div>
+    <p id="status" role="status" aria-live="polite">앱에서 요청한 연결만 확인할 수 있어요.</p>
+    <button id="start" type="button" disabled>사람 확인 시작</button>
+    <button id="cancel" type="button" class="secondary" disabled>취소하고 앱으로 돌아가기</button>
+    <noscript>사람 확인에는 JavaScript가 필요해요. 이 창을 닫고 앱으로 돌아가 주세요.</noscript>
+  </main>
+</body>
+</html>
